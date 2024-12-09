@@ -409,10 +409,17 @@
 "Assets/KinematicCharacterController/Walkthrough/8- Creating a moving platform/Scripts/MyPlayer.cs"
 "Assets/KinematicCharacterController/Walkthrough/9- Custom collision filtering/Scripts/MyCharacterController.cs"
 "Assets/KinematicCharacterController/Walkthrough/9- Custom collision filtering/Scripts/MyPlayer.cs"
-"Assets/Scripts/Gun.cs"
-"Assets/Scripts/GunRecoil.cs"
-"Assets/Scripts/PlayerCamMovement.cs"
-"Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/Enemy/EnemyAttack.cs"
+"Assets/Scripts/Enemy/EnemyMovement.cs"
+"Assets/Scripts/Enemy/RandomSpawn.cs"
+"Assets/Scripts/Entities/Entity.cs"
+"Assets/Scripts/GameOverScreen.cs"
+"Assets/Scripts/Gun/Gun.cs"
+"Assets/Scripts/Gun/GunDamage.cs"
+"Assets/Scripts/Gun/GunRecoil.cs"
+"Assets/Scripts/Player/PlayerCamMovement.cs"
+"Assets/Scripts/Player/PlayerHealth.cs"
+"Assets/Scripts/Player/PlayerMovement.cs"
 -langversion:9.0
 /deterministic
 /optimize+
