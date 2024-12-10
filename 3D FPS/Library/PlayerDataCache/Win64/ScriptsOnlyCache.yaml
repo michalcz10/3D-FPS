@@ -1079,4 +1079,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Unity/3D-FPS/Builded/V01/3D FPS.exe
+  playerPath: D:/Unity/3D-FPS/Builded/V01LowQ/3D FPS.exe
