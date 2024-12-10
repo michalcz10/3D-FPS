@@ -80,6 +80,9 @@ ScriptsOnlyBuild:
     fullTypeName: GameOverScreen
     methodName: RestartButton
   - assembly: Assembly-CSharp
+    fullTypeName: GameOverScreen
+    methodName: ExitButton
+  - assembly: Assembly-CSharp
     fullTypeName: GunRecoil
     methodName: ApplyRecoil
   - assembly: Assembly-CSharp
@@ -916,7 +919,7 @@ ScriptsOnlyBuild:
     className: BasicPlayableBehaviour
   - hash:
       serializedVersion: 2
-      Hash: b9c7feb2d4d3a09ec88a614c19399628
+      Hash: b48007b6205d59a49fcbb9d59c239a0d
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Gun
@@ -1079,4 +1082,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Unity/3D-FPS/Builded/V01LowQ/3D FPS.exe
+  playerPath: D:/Unity/3D-FPS/Builded/V02/3D FPS.exe
