@@ -8,10 +8,12 @@ ScriptsOnlyBuild:
     - Gun
     - GunDamage
     - GunRecoil
+    - PauseScreen
     - PlayerCamMovement
     - PlayerHealth
     - PlayerMovement
     - RandomSpawn
+    - SettingsMenu
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -20,6 +22,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     Unity.TextMeshPro.dll:
+    - TMPro.TMP_Dropdown
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
@@ -42,12 +45,21 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Slider
+    - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
   serializedClasses:
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
     - TMPro.FontAssetCreationSettings
     - TMPro.KerningTable
     - TMPro.TMP_Character
+    - TMPro.TMP_Dropdown/DropdownEvent
+    - TMPro.TMP_Dropdown/OptionData
+    - TMPro.TMP_Dropdown/OptionDataList
     - TMPro.TMP_FontFeatureTable
     - TMPro.TMP_FontWeightPair
     - TMPro.TMP_GlyphAdjustmentRecord
@@ -72,10 +84,30 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.AnimationTriggers
     - UnityEngine.UI.Button/ButtonClickedEvent
     - UnityEngine.UI.ColorBlock
+    - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
+    - UnityEngine.UI.Scrollbar/ScrollEvent
+    - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
+    - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseScreen
+    methodName: RestartButtonn
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: setFullscreen
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseScreen
+    methodName: ExitButtonn
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: setVolume
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseScreen
+    methodName: SettingButtonn
   - assembly: Assembly-CSharp
     fullTypeName: GameOverScreen
     methodName: RestartButton
@@ -88,6 +120,18 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GunDamage
     methodName: Shoot
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: setResolution
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: setQuality
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseScreen
+    methodName: ContinueButtonn
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsMenu
+    methodName: ContinueButton
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -137,9 +181,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2596}
     - Class: 114
+      Script: {instanceID: 2602}
+    - Class: 114
       Script: {instanceID: 2800}
     - Class: 114
       Script: {instanceID: 3098}
+    - Class: 114
+      Script: {instanceID: 3834}
     - Class: 114
       Script: {instanceID: 4062}
     - Class: 114
@@ -151,7 +199,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4860}
     - Class: 114
+      Script: {instanceID: 4896}
+    - Class: 114
+      Script: {instanceID: 4944}
+    - Class: 114
       Script: {instanceID: 5014}
+    - Class: 114
+      Script: {instanceID: 5260}
     - Class: 114
       Script: {instanceID: 5564}
     - Class: 114
@@ -160,6 +214,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5758}
     - Class: 114
       Script: {instanceID: 6040}
+    - Class: 114
+      Script: {instanceID: 6048}
     - Class: 114
       Script: {instanceID: 6082}
     - Class: 114
@@ -170,6 +226,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 6570}
     - Class: 114
       Script: {instanceID: 6588}
+    - Class: 114
+      Script: {instanceID: 7082}
+    - Class: 114
+      Script: {instanceID: 23496}
+    - Class: 114
+      Script: {instanceID: 33658}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -189,6 +251,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1079,7 +1147,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 697d5a730d32cc3a8eba40d7fe824ba3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PauseScreen
+  - hash:
+      serializedVersion: 2
+      Hash: 1afe46dde95dc61969c01a6cab96d39a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SettingsMenu
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Unity/3D-FPS/Builded/V02/3D FPS.exe
+  playerPath: D:/Unity/3D-FPS/Builded/V04/3D FPS.exe

@@ -315,9 +315,11 @@
 "Assets/Scripts/Gun/Gun.cs"
 "Assets/Scripts/Gun/GunDamage.cs"
 "Assets/Scripts/Gun/GunRecoil.cs"
+"Assets/Scripts/PauseScreen.cs"
 "Assets/Scripts/Player/PlayerCamMovement.cs"
 "Assets/Scripts/Player/PlayerHealth.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
+"Assets/Scripts/SettingsMenu.cs"
 -langversion:9.0
 /deterministic
 /optimize+
